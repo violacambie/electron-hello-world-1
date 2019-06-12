@@ -1,0 +1,19 @@
+{
+  "name": "electron-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MABottiglieri/electron-hello-world.git"
+  },
+  "author": "Manuel André Bottiglieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MABottiglieri/electron-hello-world/issues"
+  },
+  "homepage": "https://github.com/MABottiglieri/electron-hello-world#readme"
+}
