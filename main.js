@@ -1,40 +1,25 @@
-const{app, BrowserWindow, Menu} = require('electron')
+const{app, BrowserWindow} = require('electron')
 const path = require('path')
-const url = require('url')
-require('electron-reload')(__dirname)
+require('electron-reload')(__dirname, { electron: path.join(__dirname,'/node_modules/electron') })
 
 let win
+app.on('ready', createWindow)
+app.on('window-all-closed',()=>{ app.quit() })
+app.on('activate',()=>{
+    // Su macOS è comune ri-creare la finestra dell'app quando
+    // viene cliccata l'icona sul dock e non ci sono altre finestre aperte.
+    if(win===null){ createWindow() }
+})
 
 function createWindow() {
     win = new BrowserWindow({
         width:800,
         height:600,
-        webPreferences:{nodeIntegration:true}
+        webPreferences:{
+            nodeIntegration:true
+        }
     })
-    win.loadURL(url.format({
-        pathname:path.join(__dirname,'main.html'),
-        protocol:'file',
-        slashes:true
-    }))
-
-    win.on('closed',()=>{
-        win = null
-    })
-
-    win.openDevTools()
+    win.loadFile('main.html')
+    win.webContents.openDevTools()
+    win.on('closed',()=>{ win = null })
 }
-
-app.on('ready', createWindow)
-
-app.on('window-all-closed',()=>{
-    app.quit()
-    /* if(process.platform !== 'darwin'){
-        app.quit()
-    } */
-})
-
-app.on('activate',()=>{
-    if(win==null){
-        createWindow()
-    }
-})
