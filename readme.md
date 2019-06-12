@@ -1,2 +1,2 @@
 # Readme
-Electron hello world desktop application
+*Electron* hello world desktop application

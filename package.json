@@ -2,8 +2,9 @@
   "name": "electron-hello-world",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/MABottiglieri/electron-hello-world/issues"
   },
-  "homepage": "https://github.com/MABottiglieri/electron-hello-world#readme"
+  "homepage": "https://github.com/MABottiglieri/electron-hello-world#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^5.0.3",
+    "electron-reload": "^1.4.0"
+  }
 }
