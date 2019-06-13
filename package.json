@@ -5,7 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "repository": {
     "type": "git",
@@ -16,10 +19,26 @@
   "bugs": {
     "url": "https://github.com/MABottiglieri/electron-hello-world/issues"
   },
+  "build": {
+    "appId": "electron.hello.world",
+    "productName": "Electron Hello World",
+    "copyright": "Copyright © 2019 Lombardini22",
+    "directories":{
+      "output":"build"
+    },
+    "target":"nsis",
+    "nsis":{
+      "allowToChangeInstallationDirectory":true,
+      "oneClick":false
+    },
+    "icon":"build/icon.ico",
+    "generateUpdatesFilesForAllChannels": true
+  },
   "homepage": "https://github.com/MABottiglieri/electron-hello-world#readme",
   "dependencies": {},
   "devDependencies": {
     "electron": "^5.0.3",
+    "electron-builder": "^20.43.0",
     "electron-reload": "^1.4.0"
   }
 }
