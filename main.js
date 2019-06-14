@@ -6,6 +6,7 @@ require('custom-env').env('development')
 process.env.NODE_ENV='development'
 //require('electron-reload')(__dirname, { electron: path.join(__dirname,'/node_modules/electron') })
 
+var test
 let win
 let addWindow
 
