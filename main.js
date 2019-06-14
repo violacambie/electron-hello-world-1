@@ -3,7 +3,7 @@ const path = require('path')
 
 //require('custom-env').env('production')
 require('custom-env').env('development')
-//process.env.NODE_ENV='development'
+process.env.NODE_ENV='development'
 //require('electron-reload')(__dirname, { electron: path.join(__dirname,'/node_modules/electron') })
 
 let win
