@@ -23,15 +23,15 @@
     "appId": "electron.hello.world",
     "productName": "Electron Hello World",
     "copyright": "Copyright © 2019 Lombardini22",
-    "directories":{
-      "output":"build"
+    "directories": {
+      "output": "build"
     },
-    "target":"nsis",
-    "nsis":{
-      "allowToChangeInstallationDirectory":true,
-      "oneClick":false
+    "target": "nsis",
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
     },
-    "icon":"build/icon.ico",
+    "icon": "build/icon.ico",
     "generateUpdatesFilesForAllChannels": true
   },
   "homepage": "https://github.com/MABottiglieri/electron-hello-world#readme",
